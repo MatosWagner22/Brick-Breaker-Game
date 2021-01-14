@@ -8,6 +8,7 @@ public class BallScript : MonoBehaviour
     public float Force;
     public bool inPlay;
     public Transform paddle;
+    public Transform Explosion;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,4 +40,15 @@ public class BallScript : MonoBehaviour
             Time.timeScale = 0;
         }
     }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.transform.CompareTag("Brick"))
+        {
+            Transform newExplosion = Instantiate(Explosion, other.transform.position, other.transform.rotation);
+            Destroy(newExplosion.gameObject, 2.5f);
+            Destroy(other.gameObject);
+        }
+    }
+
 }
