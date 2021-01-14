@@ -11,6 +11,7 @@ public class BallScript : MonoBehaviour
     public Transform Explosion;
     public GameManager gm;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,11 @@ public class BallScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gm.gameOver)
+        {
+            return;
+        }
+
         if (!inPlay)
         {
             transform.position = paddle.position;
@@ -50,9 +56,9 @@ public class BallScript : MonoBehaviour
             Destroy(newExplosion.gameObject, 2.5f);
 
             gm.UpdateScore(other.gameObject.GetComponent<BrickScript>().points);
+            gm.UpdateNumberOfBricks();
 
             Destroy(other.gameObject);
-            //gm.UpdateScore(1);
         }
     }
 
