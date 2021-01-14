@@ -9,6 +9,8 @@ public class BallScript : MonoBehaviour
     public bool inPlay;
     public Transform paddle;
     public Transform Explosion;
+    public GameManager gm;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +29,6 @@ public class BallScript : MonoBehaviour
         {
             inPlay = true;
             rb.AddForce(Vector2.up * Force);
-            Time.timeScale = 1;
         }
     }
 
@@ -35,11 +36,11 @@ public class BallScript : MonoBehaviour
     {
         if (other.CompareTag("Bottom"))
         {
+            gm.UpdateLives(-1);
             rb.velocity = Vector2.zero;
             inPlay = false;
-            Time.timeScale = 0;
         }
-    }
+    } 
 
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -47,7 +48,11 @@ public class BallScript : MonoBehaviour
         {
             Transform newExplosion = Instantiate(Explosion, other.transform.position, other.transform.rotation);
             Destroy(newExplosion.gameObject, 2.5f);
+
+            gm.UpdateScore(other.gameObject.GetComponent<BrickScript>().points);
+
             Destroy(other.gameObject);
+            //gm.UpdateScore(1);
         }
     }
 
