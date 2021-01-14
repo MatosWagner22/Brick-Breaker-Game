@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 118221844}
   - component: {fileID: 118221843}
   - component: {fileID: 118221846}
+  - component: {fileID: 118221847}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Untagged
@@ -488,6 +489,27 @@ PolygonCollider2D:
       - {x: 1.67, y: -0.34}
       - {x: 1.79, y: -0.13}
       - {x: 1.79, y: 0.14999999}
+--- !u!50 &118221847
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118221842}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &123909612
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,7 +607,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 432e504e6473f4696bb1b80b96ed3190, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -628,6 +650,7 @@ MonoBehaviour:
   Explosion: {fileID: 6724605203775315857, guid: 5e8344f845c04dc44a9d0c645c852c67,
     type: 3}
   gm: {fileID: 151029788}
+  powerUP: {fileID: 4894416898929936758, guid: 9350d0d4a6628bf4d9dd64a831e5634f, type: 3}
 --- !u!1 &137663307
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class BallScript : MonoBehaviour
     public Transform paddle;
     public Transform Explosion;
     public GameManager gm;
+    public Transform powerUP;
 
 
     // Start is called before the first frame update
@@ -52,6 +53,13 @@ public class BallScript : MonoBehaviour
     {
         if (other.transform.CompareTag("Brick"))
         {
+            int randomChance = Random.Range(1, 101);
+
+            if (randomChance < 50)
+            {
+                Instantiate(powerUP, other.transform.position, other.transform.rotation);
+            }
+
             Transform newExplosion = Instantiate(Explosion, other.transform.position, other.transform.rotation);
             Destroy(newExplosion.gameObject, 2.5f);
 
