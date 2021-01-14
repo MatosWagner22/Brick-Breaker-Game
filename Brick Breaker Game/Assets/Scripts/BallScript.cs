@@ -53,20 +53,29 @@ public class BallScript : MonoBehaviour
     {
         if (other.transform.CompareTag("Brick"))
         {
-            int randomChance = Random.Range(1, 101);
+            BrickScript brick = other.gameObject.GetComponent<BrickScript>();
 
-            if (randomChance < 50)
+            if (brick.hitsToBreak > 1)
             {
-                Instantiate(powerUP, other.transform.position, other.transform.rotation);
+                brick.BreakBrick();
             }
+            else
+            {
+                int randomChance = Random.Range(1, 101);
 
-            Transform newExplosion = Instantiate(Explosion, other.transform.position, other.transform.rotation);
-            Destroy(newExplosion.gameObject, 2.5f);
+                if (randomChance < 10)
+                {
+                    Instantiate(powerUP, other.transform.position, other.transform.rotation);
+                }
 
-            gm.UpdateScore(other.gameObject.GetComponent<BrickScript>().points);
-            gm.UpdateNumberOfBricks();
+                Transform newExplosion = Instantiate(Explosion, other.transform.position, other.transform.rotation);
+                Destroy(newExplosion.gameObject, 2.5f);
 
-            Destroy(other.gameObject);
+                gm.UpdateScore(brick.points);
+                gm.UpdateNumberOfBricks();
+
+                Destroy(other.gameObject);
+            }
         }
     }
 

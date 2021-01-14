@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOver = true;
-        score_final.text = ": " + Score;
+        score_final.text = ":" + Score;
         gameOverPanel.SetActive(true);
     }
 
