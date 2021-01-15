@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     public int Score;
     public int numberOfBricks;
 
-    public Text score_text, lives_text, score_final;
+    public Transform Explosion;
+    public Text score_text, lives_text, score_final, highscore_text;
     public GameObject gameOverPanel, loadLevelPanel;
     public Transform[] Levels;
     public int currentLevelIndex = 0;
@@ -83,8 +84,20 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOver = true;
-        score_final.text = ":" + Score;
         gameOverPanel.SetActive(true);
+        int highScore = PlayerPrefs.GetInt("HIGHSCORE");
+        score_final.text = "Score: " + Score;
+        if (Score > highScore)
+        {
+            PlayerPrefs.SetInt("HIGHSCORE", Score);
+            highscore_text.text = "New High Score: " + highScore;
+            Transform newExplosion = Instantiate(Explosion, gameObject.transform.position, gameObject.transform.rotation);
+            Destroy(newExplosion.gameObject, 2.5f);
+        }
+        else
+        {
+            highscore_text.text = "High Score: " + highScore;
+        }
     }
 
     public void PlayAgain()

@@ -691,9 +691,12 @@ MonoBehaviour:
   Lives: 3
   Score: 0
   numberOfBricks: 0
+  Explosion: {fileID: 7201793732960443633, guid: 593fa8cb58325e54783c9270ce45c450,
+    type: 3}
   score_text: {fileID: 348430308}
   lives_text: {fileID: 394760468}
   score_final: {fileID: 293225158}
+  highscore_text: {fileID: 1101042479}
   gameOverPanel: {fileID: 941634283}
   loadLevelPanel: {fileID: 846395623}
   Levels:
@@ -749,8 +752,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 344.5, y: -14.2}
-  m_SizeDelta: {x: 309.2567, y: 167.27866}
+  m_AnchoredPosition: {x: 0, y: -59}
+  m_SizeDelta: {x: 562.9481, y: 83.63934}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &293225157
 CanvasRenderer:
@@ -773,7 +776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.023529414, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -781,18 +784,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: c239d71b84cad4ba4bdcee3ad7a3a800, type: 3}
-    m_FontSize: 120
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 150
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: :000
+  m_Text: 'Score: 0000'
 --- !u!1 &312382190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,6 +1617,7 @@ RectTransform:
   - {fileID: 293225156}
   - {fileID: 840828503}
   - {fileID: 137663308}
+  - {fileID: 1101042477}
   m_Father: {fileID: 343487767}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1622,6 +1626,84 @@ RectTransform:
   m_AnchoredPosition: {x: -4.493225, y: 0.0043945312}
   m_SizeDelta: {x: -8.98584, y: 0.008850098}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1101042476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1101042477}
+  - component: {fileID: 1101042478}
+  - component: {fileID: 1101042479}
+  m_Layer: 5
+  m_Name: High Score Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1101042477
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101042476}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 941634286}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000061035, y: 41.82}
+  m_SizeDelta: {x: 1015.01416, y: 83.63995}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1101042478
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101042476}
+  m_CullTransparentMesh: 0
+--- !u!114 &1101042479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101042476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c239d71b84cad4ba4bdcee3ad7a3a800, type: 3}
+    m_FontSize: 80
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 150
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'High Score: 0000'
 --- !u!1 &1109096420
 GameObject:
   m_ObjectHideFlags: 0
