@@ -105,10 +105,9 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Main");
     }
 
-    public void Quit()
+    public void Home()
     {
-        Application.Quit();
-        Debug.Log("Quit");
+        SceneManager.LoadScene("StartMenu");
     }
 
 }
