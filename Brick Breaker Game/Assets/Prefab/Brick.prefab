@@ -72,8 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b6cfec2c7104945d281b90845dd19b9a, type: 3}
-  m_Color: {r: 1, g: 0, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 63a52dfb055be41d381cb2afc4fc8a1b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -124,5 +124,3 @@ MonoBehaviour:
   points: 1
   hitsToBreak: 1
   hitSprite: {fileID: 0}
-  Explosion: {fileID: 6724605203775315857, guid: 5e8344f845c04dc44a9d0c645c852c67,
-    type: 3}

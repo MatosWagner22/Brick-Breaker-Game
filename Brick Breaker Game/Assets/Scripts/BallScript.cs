@@ -11,12 +11,13 @@ public class BallScript : MonoBehaviour
     public Transform Explosion;
     public GameManager gm;
     public Transform powerUP;
-
+    AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -76,6 +77,8 @@ public class BallScript : MonoBehaviour
 
                 Destroy(other.gameObject);
             }
+
+            audio.Play();
         }
     }
 
