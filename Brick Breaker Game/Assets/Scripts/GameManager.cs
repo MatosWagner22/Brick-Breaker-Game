@@ -11,7 +11,9 @@ public class GameManager : MonoBehaviour
     public int numberOfBricks;
 
     public Text score_text, lives_text, score_final;
-    public GameObject gameOverPanel;
+    public GameObject gameOverPanel, loadLevelPanel;
+    public Transform[] Levels;
+    public int currentLevelIndex = 0;
 
     public bool gameOver;
 
@@ -53,8 +55,29 @@ public class GameManager : MonoBehaviour
         numberOfBricks--;
         if (numberOfBricks <= 0)
         {
-            GameOver();
+            if (currentLevelIndex >= Levels.Length - 1)
+            {
+                GameOver();
+            }
+            else
+            {
+                loadLevelPanel.SetActive(true);
+                Lives++;
+                loadLevelPanel.GetComponentInChildren<Text>().text = "Loading Level " + (currentLevelIndex + 2);
+                gameOver = true;
+                Invoke("Loadlevel", 3f);
+            }
         }
+    }
+
+    void Loadlevel()
+    {
+        currentLevelIndex++;
+        Instantiate(Levels[currentLevelIndex], Vector2.zero, Quaternion.identity);
+        lives_text.text = "Lives: " + Lives;
+        numberOfBricks = GameObject.FindGameObjectsWithTag("Brick").Length;
+        gameOver = false;
+        loadLevelPanel.SetActive(false);
     }
 
     public void GameOver()
