@@ -11,12 +11,12 @@ public class GameManager : MonoBehaviour
     public int numberOfBricks;
 
     public Transform Explosion;
-    public Text score_text, lives_text, score_final, highscore_text;
-    public GameObject gameOverPanel, loadLevelPanel;
+    public Text score_text, lives_text, score_final, highscore_text, score_pause;
+    public GameObject gameOverPanel, loadLevelPanel, pausePanel;
     public Transform[] Levels;
     public int currentLevelIndex = 0;
 
-    public bool gameOver;
+    public bool gameOver, pause;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +29,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            KeepPlay();
+        }
     }
 
     public void UpdateLives(int changesInLives)
@@ -107,7 +110,32 @@ public class GameManager : MonoBehaviour
 
     public void Home()
     {
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+        }
+
         SceneManager.LoadScene("StartMenu");
+    }
+
+    public void Pausar()
+    {
+        if (Time.timeScale == 1)
+        {
+            score_pause.text = "Score: " + Score;
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+    }
+
+    public void KeepPlay()
+    {
+        Pausar();
+        pause = !pause;
+        pausePanel.SetActive(pause);
     }
 
 }

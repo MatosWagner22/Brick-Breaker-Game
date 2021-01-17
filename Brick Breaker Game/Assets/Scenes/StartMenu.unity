@@ -446,7 +446,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!222 &586090453
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -997,7 +997,11 @@ MonoBehaviour:
     <- and -> To Move
 
 
-    Space bar to launch ball'
+    Space bar to launch ball
+
+
+    Escape
+    to Pause the game'
 --- !u!222 &1624809281
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1075,7 +1079,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!222 &1707566147
 CanvasRenderer:
   m_ObjectHideFlags: 0
