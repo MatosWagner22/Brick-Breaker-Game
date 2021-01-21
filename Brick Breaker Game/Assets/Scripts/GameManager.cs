@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
         if (Score > highScore)
         {
             PlayerPrefs.SetInt("HIGHSCORE", Score);
-            highscore_text.text = "New High Score: " + highScore;
+            highscore_text.text = "New High Score: " + Score;
             Transform newExplosion = Instantiate(Explosion, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(newExplosion.gameObject, 2.5f);
         }

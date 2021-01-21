@@ -688,7 +688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e6043492f5d9246972417265656593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lives: 100
+  Lives: 3
   Score: 0
   numberOfBricks: 0
   Explosion: {fileID: 7201793732960443633, guid: 593fa8cb58325e54783c9270ce45c450,
@@ -1126,8 +1126,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 125.2, y: -28.799988}
-  m_SizeDelta: {x: 232.43472, y: 57.6167}
+  m_AnchoredPosition: {x: 138.3, y: -28.799988}
+  m_SizeDelta: {x: 258.6362, y: 57.6167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &348430307
 CanvasRenderer:
@@ -1245,8 +1245,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -112, y: -28.799988}
-  m_SizeDelta: {x: 206.02783, y: 57.6167}
+  m_AnchoredPosition: {x: -124.25, y: -27.44}
+  m_SizeDelta: {x: 230.52393, y: 54.894897}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &458234509
 GameObject:
