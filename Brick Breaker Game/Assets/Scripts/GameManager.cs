@@ -10,12 +10,12 @@ public class GameManager : MonoBehaviour
     public int Score;
     public int numberOfBricks;
 
-    public Transform Explosion;
     public Text score_text, lives_text, score_final, highscore_text, score_pause;
     public GameObject gameOverPanel, loadLevelPanel, pausePanel;
     public Transform[] Levels;
     public int currentLevelIndex = 0;
 
+    private GameObject UnbreakableBricks;
     public bool gameOver, pause;
 
     // Start is called before the first frame update
@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
         lives_text.text = "Lives: " + Lives;
         score_text.text = "Score: " + Score;
         numberOfBricks = GameObject.FindGameObjectsWithTag("Brick").Length;
+        UnbreakableBricks = GameObject.FindGameObjectWithTag("Unbreakable");
     }
 
     // Update is called once per frame
@@ -76,6 +77,7 @@ public class GameManager : MonoBehaviour
 
     void Loadlevel()
     {
+        Destroy(UnbreakableBricks);
         currentLevelIndex++;
         Instantiate(Levels[currentLevelIndex], Vector2.zero, Quaternion.identity);
         lives_text.text = "Lives: " + Lives;
@@ -94,8 +96,6 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("HIGHSCORE", Score);
             highscore_text.text = "New High Score: " + Score;
-            Transform newExplosion = Instantiate(Explosion, gameObject.transform.position, gameObject.transform.rotation);
-            Destroy(newExplosion.gameObject, 2.5f);
         }
         else
         {

@@ -123,6 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 1
   hitsToBreak: 1
+  ExplosionColor: 0
   hitSprite: {fileID: 0}
 --- !u!1 &319347436055101514
 GameObject:
@@ -247,6 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &359657982192435676
 GameObject:
@@ -371,6 +373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &956397297720521042
 GameObject:
@@ -495,6 +498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &1100133913070562430
 GameObject:
@@ -619,6 +623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &1124857689429515287
 GameObject:
@@ -743,6 +748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &1182576510704670208
 GameObject:
@@ -867,6 +873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 1
   hitsToBreak: 1
+  ExplosionColor: 0
   hitSprite: {fileID: 0}
 --- !u!1 &1766444862935721883
 GameObject:
@@ -991,6 +998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 1
   hitsToBreak: 1
+  ExplosionColor: 0
   hitSprite: {fileID: 0}
 --- !u!1 &1919686924885889077
 GameObject:
@@ -1187,6 +1195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &2260115138044008076
 GameObject:
@@ -1311,6 +1320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 1
   hitsToBreak: 1
+  ExplosionColor: 0
   hitSprite: {fileID: 0}
 --- !u!1 &2332611272351424982
 GameObject:
@@ -1435,6 +1445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &2408279185118196087
 GameObject:
@@ -1559,6 +1570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &4084770816895476775
 GameObject:
@@ -1683,6 +1695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 1
   hitsToBreak: 1
+  ExplosionColor: 0
   hitSprite: {fileID: 0}
 --- !u!1 &4209039143513535800
 GameObject:
@@ -1807,6 +1820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 1
   hitsToBreak: 1
+  ExplosionColor: 0
   hitSprite: {fileID: 0}
 --- !u!1 &4309742820702762310
 GameObject:
@@ -1931,6 +1945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 1
   hitsToBreak: 1
+  ExplosionColor: 0
   hitSprite: {fileID: 0}
 --- !u!1 &4652202297825601236
 GameObject:
@@ -2055,6 +2070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &4810014107415137681
 GameObject:
@@ -2179,6 +2195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &5121433420151789493
 GameObject:
@@ -2303,6 +2320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &5174356044138012594
 GameObject:
@@ -2427,6 +2445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &5320141207542056592
 GameObject:
@@ -2551,6 +2570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &5661860798485876986
 GameObject:
@@ -2675,6 +2695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &5831996306758616377
 GameObject:
@@ -2871,6 +2892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &6399475764885337821
 GameObject:
@@ -2995,6 +3017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &6415717603747224030
 GameObject:
@@ -3119,6 +3142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &6495092349478444735
 GameObject:
@@ -3243,6 +3267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 1
   hitsToBreak: 1
+  ExplosionColor: 0
   hitSprite: {fileID: 0}
 --- !u!1 &6675420540735615977
 GameObject:
@@ -3367,6 +3392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 1
   hitsToBreak: 1
+  ExplosionColor: 0
   hitSprite: {fileID: 0}
 --- !u!1 &6732460295375530098
 GameObject:
@@ -3526,6 +3552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 1
   hitsToBreak: 1
+  ExplosionColor: 0
   hitSprite: {fileID: 0}
 --- !u!1 &6994602708430730525
 GameObject:
@@ -3650,6 +3677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 1
   hitsToBreak: 1
+  ExplosionColor: 0
   hitSprite: {fileID: 0}
 --- !u!1 &7161187684473446937
 GameObject:
@@ -3774,6 +3802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &7352705821071815000
 GameObject:
@@ -3898,6 +3927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 1
   hitsToBreak: 1
+  ExplosionColor: 0
   hitSprite: {fileID: 0}
 --- !u!1 &7389149498787801840
 GameObject:
@@ -4022,6 +4052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 1
   hitsToBreak: 1
+  ExplosionColor: 0
   hitSprite: {fileID: 0}
 --- !u!1 &7560564665880616427
 GameObject:
@@ -4146,6 +4177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &7630784153124868208
 GameObject:
@@ -4318,6 +4350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &7988323407005470391
 GameObject:
@@ -4442,6 +4475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 1
   hitsToBreak: 1
+  ExplosionColor: 0
   hitSprite: {fileID: 0}
 --- !u!1 &8045049785886519708
 GameObject:
@@ -4566,6 +4600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 1
   hitsToBreak: 1
+  ExplosionColor: 0
   hitSprite: {fileID: 0}
 --- !u!1 &8228484058844913226
 GameObject:
@@ -4690,6 +4725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &8345189645910440177
 GameObject:
@@ -4814,6 +4850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 1
   hitsToBreak: 1
+  ExplosionColor: 0
   hitSprite: {fileID: 0}
 --- !u!1 &8653030237958639512
 GameObject:
@@ -4938,6 +4975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 1
   hitsToBreak: 1
+  ExplosionColor: 0
   hitSprite: {fileID: 0}
 --- !u!1 &8664406367212664012
 GameObject:
@@ -5062,6 +5100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &8765378813894312541
 GameObject:
@@ -5186,6 +5225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 1
   hitsToBreak: 1
+  ExplosionColor: 0
   hitSprite: {fileID: 0}
 --- !u!1 &9065600704066605778
 GameObject:
@@ -5310,6 +5350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
 --- !u!1 &9152355586861202217
 GameObject:
@@ -5434,4 +5475,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 2
   hitsToBreak: 2
+  ExplosionColor: 1
   hitSprite: {fileID: 21300000, guid: b0eed8661cb034c7a9f8aaf0d098dcb3, type: 3}
