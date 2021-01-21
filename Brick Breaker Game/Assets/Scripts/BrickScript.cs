@@ -6,6 +6,7 @@ public class BrickScript : MonoBehaviour
 {
     public int points;
     public int hitsToBreak;
+    public int ExplosionColor;
     public Sprite hitSprite;
     //public Transform Explosion;
 

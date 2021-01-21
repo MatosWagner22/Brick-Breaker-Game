@@ -8,7 +8,7 @@ public class BallScript : MonoBehaviour
     public float Force;
     public bool inPlay;
     public Transform paddle;
-    public Transform Explosion;
+    public Transform[] Explosion;
     public GameManager gm;
     public Transform powerUP;
     AudioSource audio;
@@ -69,7 +69,7 @@ public class BallScript : MonoBehaviour
                     Instantiate(powerUP, other.transform.position, other.transform.rotation);
                 }
 
-                Transform newExplosion = Instantiate(Explosion, other.transform.position, other.transform.rotation);
+                Transform newExplosion = Instantiate(Explosion[brick.ExplosionColor], other.transform.position, other.transform.rotation);
                 Destroy(newExplosion.gameObject, 2.5f);
 
                 gm.UpdateScore(brick.points);

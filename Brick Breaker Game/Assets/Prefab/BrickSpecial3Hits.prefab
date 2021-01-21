@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 4854795861668550176, guid: 8dd8e976d0c64464c834488d31a31e56,
         type: 3}
       propertyPath: m_Name
-      value: BrickSpecial2Hits Variant
+      value: BrickSpecial3Hits
       objectReference: {fileID: 0}
     - target: {fileID: 4854795861668550178, guid: 8dd8e976d0c64464c834488d31a31e56,
         type: 3}
@@ -87,6 +87,11 @@ PrefabInstance:
         type: 3}
       propertyPath: hitsToBreak
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203813200093374655, guid: 8dd8e976d0c64464c834488d31a31e56,
+        type: 3}
+      propertyPath: ExplosionColor
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dd8e976d0c64464c834488d31a31e56, type: 3}
