@@ -10,7 +10,7 @@ public class BallScript : MonoBehaviour
     public Transform paddle;
     public Transform[] Explosion;
     public GameManager gm;
-    public Transform powerUP;
+    public Transform[] powerUPS;
     AudioSource audio;
 
     // Start is called before the first frame update
@@ -62,11 +62,17 @@ public class BallScript : MonoBehaviour
             }
             else
             {
-                int randomChance = Random.Range(1, 101);
+                int randomChance1 = Random.Range(1, 101);
+                int randomChance2 = Random.Range(1, 101);
 
-                if (randomChance < 10)
+                if (randomChance1 < 10)
                 {
-                    Instantiate(powerUP, other.transform.position, other.transform.rotation);
+                    Instantiate(powerUPS[0], other.transform.position, other.transform.rotation);
+                }
+
+                if (randomChance2 < 10)
+                {
+                    Instantiate(powerUPS[1], other.transform.position, other.transform.rotation);
                 }
 
                 Transform newExplosion = Instantiate(Explosion[brick.ExplosionColor], other.transform.position, other.transform.rotation);

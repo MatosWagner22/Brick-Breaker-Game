@@ -9,6 +9,7 @@ TagManager:
   - Brick
   - ExtraLife
   - Unbreakable
+  - KillLife
   layers:
   - Default
   - TransparentFX

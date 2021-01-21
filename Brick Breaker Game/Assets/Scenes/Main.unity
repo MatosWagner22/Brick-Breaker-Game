@@ -433,7 +433,9 @@ MonoBehaviour:
   - {fileID: 1027724446368653385, guid: 6172efaeb9c213a489ec556fa04394cc, type: 3}
   - {fileID: 3974534429135773291, guid: 6aa33e7f796260948ab3f495f72288b9, type: 3}
   gm: {fileID: 151029788}
-  powerUP: {fileID: 4894416898929936758, guid: 9350d0d4a6628bf4d9dd64a831e5634f, type: 3}
+  powerUPS:
+  - {fileID: 4894416898929936758, guid: 9350d0d4a6628bf4d9dd64a831e5634f, type: 3}
+  - {fileID: 5064067196375231611, guid: 006b84ff9ff7d0b4e9e7b0dd58e8ce8c, type: 3}
 --- !u!82 &123909618
 AudioSource:
   m_ObjectHideFlags: 0
@@ -693,8 +695,6 @@ MonoBehaviour:
   Lives: 3
   Score: 0
   numberOfBricks: 0
-  Explosion: {fileID: 7201793732960443633, guid: 593fa8cb58325e54783c9270ce45c450,
-    type: 3}
   score_text: {fileID: 348430308}
   lives_text: {fileID: 394760468}
   score_final: {fileID: 293225158}

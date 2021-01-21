@@ -44,6 +44,11 @@ public class PaddleScript : MonoBehaviour
             gm.UpdateLives(1);
         }
 
+        if (other.CompareTag("KillLife"))
+        {
+            gm.UpdateLives(-1);
+        }
+
         Destroy(other.gameObject);
     }
 }
