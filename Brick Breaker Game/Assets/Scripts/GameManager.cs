@@ -90,15 +90,48 @@ public class GameManager : MonoBehaviour
          * Level 4 = 66             194
          * Level 5 = 56             250
         */
+        if (level == 0)
+        {
+            loadingLevel = level;
+            LevelLoading();
+            Score = 0;
+        }
+
+        if (level == 1)
+        {
+            loadingLevel = level;
+            LevelLoading();
+            Score = 18;
+        }
+
+        if (level == 2)
+        {
+            loadingLevel = level;
+            LevelLoading();
+            Score = 84;
+        }
+
+        if (level == 3)
+        {
+            loadingLevel = level;
+            LevelLoading();
+            Score = 128;
+        }
+
+        if (level == 4)
+        {
+            loadingLevel = level;
+            LevelLoading();
+            Score = 194;
+        }
+
+
     }
 
     void Loadlevel()
     {
-        if (Score > 17)
-        {
-            currentLevelIndex++;
-        }
         loadingLevel++;
+        currentLevelIndex = loadingLevel - 1;
         Destroy(UnbreakableBricks);
         Instantiate(Levels[currentLevelIndex], Vector2.zero, Quaternion.identity);
         lives_text.text = "Lives: " + Lives;
