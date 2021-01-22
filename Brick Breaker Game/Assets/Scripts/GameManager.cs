@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public Text score_text, lives_text, score_final, highscore_text, score_pause;
     public GameObject gameOverPanel, loadLevelPanel, pausePanel;
     public Transform[] Levels;
-    public int currentLevelIndex = 0;
+    public int loadingLevel = 0, currentLevelIndex = 0;
 
     private GameObject UnbreakableBricks;
     public bool gameOver, pause;
@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
         score_text.text = "Score: " + Score;
         numberOfBricks = GameObject.FindGameObjectsWithTag("Brick").Length;
         UnbreakableBricks = GameObject.FindGameObjectWithTag("Unbreakable");
+
+        LevelLoading();
     }
 
     // Update is called once per frame
@@ -66,19 +68,38 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                loadLevelPanel.SetActive(true);
-                Lives++;
-                loadLevelPanel.GetComponentInChildren<Text>().text = "Loading Level " + (currentLevelIndex + 2);
-                gameOver = true;
-                Invoke("Loadlevel", 3f);
+                LevelLoading();
             }
         }
     }
 
+    void LevelLoading()
+    {
+        loadLevelPanel.SetActive(true);
+        Lives++;
+        loadLevelPanel.GetComponentInChildren<Text>().text = "Loading Level " + (loadingLevel + 1);
+        gameOver = true;
+        Invoke("Loadlevel", 3f);
+    }
+
+    void LevelSelect(int level)
+    {
+        /* Level 1 = 18             18
+         * Level 2 = 66             84
+         * Level 3 = 44             128
+         * Level 4 = 66             194
+         * Level 5 = 56             250
+        */
+    }
+
     void Loadlevel()
     {
+        if (Score > 17)
+        {
+            currentLevelIndex++;
+        }
+        loadingLevel++;
         Destroy(UnbreakableBricks);
-        currentLevelIndex++;
         Instantiate(Levels[currentLevelIndex], Vector2.zero, Quaternion.identity);
         lives_text.text = "Lives: " + Lives;
         numberOfBricks = GameObject.FindGameObjectsWithTag("Brick").Length;
