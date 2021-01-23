@@ -18,7 +18,6 @@ public class Startmenu : MonoBehaviour
         {
             highscore_text.text = "High Score: " + PlayerPrefs.GetInt("HIGHSCORE");
         }
-        
     }
 
     public void Play()
@@ -40,12 +39,6 @@ public class Startmenu : MonoBehaviour
 
     void AvailableLevels(int Score)
     {
-        /* Level 1 = 18             18
-         * Level 2 = 66             84
-         * Level 3 = 44             128
-         * Level 4 = 66             194
-         * Level 5 = 56             250
-        */
         if (Score > 17)
         {
             Level1.SetActive(true);
@@ -66,7 +59,7 @@ public class Startmenu : MonoBehaviour
             Level4.SetActive(true);
         }
 
-        if (Score > 2899)
+        if (Score > 249)
         {
             Level5.SetActive(true);
         }
