@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
         numberOfBricks = GameObject.FindGameObjectsWithTag("Brick").Length;
         UnbreakableBricks = GameObject.FindGameObjectWithTag("Unbreakable");
 
-        LevelLoading();
+        LevelSelect(PlayerPrefs.GetInt("CurrentLevel"));
     }
 
     // Update is called once per frame
@@ -76,7 +76,6 @@ public class GameManager : MonoBehaviour
     void LevelLoading()
     {
         loadLevelPanel.SetActive(true);
-        Lives++;
         loadLevelPanel.GetComponentInChildren<Text>().text = "Loading Level " + (loadingLevel + 1);
         gameOver = true;
         Invoke("Loadlevel", 3f);
@@ -93,39 +92,35 @@ public class GameManager : MonoBehaviour
         if (level == 0)
         {
             loadingLevel = level;
-            LevelLoading();
             Score = 0;
         }
 
         if (level == 1)
         {
             loadingLevel = level;
-            LevelLoading();
             Score = 18;
         }
 
         if (level == 2)
         {
             loadingLevel = level;
-            LevelLoading();
             Score = 84;
         }
 
         if (level == 3)
         {
             loadingLevel = level;
-            LevelLoading();
             Score = 128;
         }
 
         if (level == 4)
         {
             loadingLevel = level;
-            LevelLoading();
             Score = 194;
         }
 
-
+        score_text.text = "Score: " + Score;
+        LevelLoading();
     }
 
     void Loadlevel()
@@ -134,6 +129,7 @@ public class GameManager : MonoBehaviour
         currentLevelIndex = loadingLevel - 1;
         Destroy(UnbreakableBricks);
         Instantiate(Levels[currentLevelIndex], Vector2.zero, Quaternion.identity);
+        Lives++;
         lives_text.text = "Lives: " + Lives;
         numberOfBricks = GameObject.FindGameObjectsWithTag("Brick").Length;
         gameOver = false;

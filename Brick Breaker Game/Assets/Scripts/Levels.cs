@@ -12,13 +12,13 @@ public class Levels : MonoBehaviour
 
     void Start()
     {
-        //p = GameObject.FindGameObjectWithTag("GameManager");
-        //gm.FindObjectOfType<GameManager>().FindPlayer(p);
+        
     }
 
     public void SelectLevel()
     {
+        PlayerPrefs.SetInt("CurrentLevel", indexLevel - 1);
         Debug.Log(indexLevel);
-       // SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Main");
     }
 }

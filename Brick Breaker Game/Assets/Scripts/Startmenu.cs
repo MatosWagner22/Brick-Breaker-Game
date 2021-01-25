@@ -22,6 +22,7 @@ public class Startmenu : MonoBehaviour
 
     public void Play()
     {
+        PlayerPrefs.SetInt("CurrentLevel", 0);
         SceneManager.LoadScene("Main");
     }
 
